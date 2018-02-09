@@ -1,8 +1,6 @@
 <h1 align="center"> CodeExamples </h1> <br>
 <p align="center">
-  <a href="https://github.com/NoRoboto/CodeExamples">
-    <img alt="Banner" title="Bannercito" src="https://cdn.gratisography.com/photos/436H.jpg" width="450">
-  </a>
+  <img alt="Banner" title="Bannercito" src="https://cdn.gratisography.com/photos/436H.jpg" width="450">
 </p>
 
 <p align="center">
@@ -29,7 +27,7 @@ Repository where I will put useful things (and maybe not useful), to complement 
 
 ## Acknowledgments
 
-Thanks to [Ryan McGuire](https://www.jetbrains.com) for great CC0 photo page [free Creative Commons Images](https://gratisography.com/). And to the rest of the people that I use  hotlink images.
+Thanks to [Ryan McGuire](https://www.jetbrains.com) for great CC0 photo page [free Creative Commons Images](https://gratisography.com/). And to the rest of the people that I use hotlink images.
 
 ## License
 The MIT License (MIT) 2018.
