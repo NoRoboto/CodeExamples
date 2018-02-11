@@ -1,6 +1,6 @@
 <h1 align="center"> CodeExamples </h1> <br>
 <p align="center">
-  <img alt="Banner" title="Bannercito" src="https://cdn.gratisography.com/photos/436H.jpg" width="450">
+  <img alt="Banner" title="Bannercito" src="https://github.com/NoRoboto/CodeExamples/src/banner.jpg" width="450">
 </p>
 
 <p align="center">
