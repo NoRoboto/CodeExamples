@@ -1,0 +1,16 @@
+{
+  "name": "manager-console",
+  "version": "0.0.1",
+  "description": "Awesome manager for some sorting algorithms",
+  "main": "menu.js",
+  "scripts": {
+    "start": "node menu.js",
+    "force": "node --max_old_space_size=1024 menu.js"
+  },
+  "dependencies": {
+    "ora": "^2.0.0",
+    "prompt-sync": "^4.1.6",
+    "terminal-menu": "^2.1.1",
+    "threads": "^0.10.1"
+  }
+}
