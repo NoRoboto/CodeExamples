@@ -31,9 +31,9 @@ const mainWrapper = (funct, array, value) => {
   const end = process.hrtime(start)
   const used = process.memoryUsage().heapUsed / 1024 / 1024
 
-  result.time = end[1] / 1000000
+  result.time = `${end[0]} segs, ${end[1] / 1000000}`
   result.ram = used
-  const infoString = `Finished\nIndex: ${result.index}\nRam: ${used} MB\nTime: ${end[1]/1000000} ms`
+  const infoString = `Finished\nIndex: ${result.index}\nRam: ${used} MB\nTime: ${end[0]} segs ${end[1]/1000000} ms`
   spinner.succeed([infoString])
 
   result.type = 'search'
