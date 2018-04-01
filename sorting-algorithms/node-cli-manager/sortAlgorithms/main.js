@@ -30,9 +30,9 @@ const mainWrapper = (funct, array) => {
     const end = process.hrtime(start);
     const used = process.memoryUsage().heapUsed / 1024 / 1024
 
-    result.time = `${end[0]} segs, ${end[1] / 1000000}`
+    result.time = `${end[0]} secs, ${end[1] / 1000000}`
     result.ram = used
-    const infoString = `Finished \nRam: ${used} MB \nTime: ${end[0]} segs ${end[1]/1000000} ms \nExchanges: ${result.swaps}`
+    const infoString = `Finished \nRam: ${used} MB \nTime: ${end[0]} secs ${end[1]/1000000} ms \nExchanges: ${result.swaps}`
     spinner.succeed([infoString])
 
     result.type = 'sort'
