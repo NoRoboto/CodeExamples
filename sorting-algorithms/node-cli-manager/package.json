@@ -5,7 +5,7 @@
   "main": "menu.js",
   "scripts": {
     "start": "node menu.js",
-    "force": "node --max_old_space_size=1024 menu.js"
+    "force": "node --max_old_space_size=2048 menu.js"
   },
   "dependencies": {
     "ora": "^2.0.0",
