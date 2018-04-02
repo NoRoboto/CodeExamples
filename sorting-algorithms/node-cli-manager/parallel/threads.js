@@ -41,11 +41,12 @@ const parallelSearch = (arrayLength, array, value) => {
       .on('message', function (response) {
         const end = process.hrtime(start)
         const used = process.memoryUsage().heapUsed / 1024 / 1024
-        const infoString = `Finished \nIndex: ${response}  \nRam: ${used} MB \nTime: ${end[1]/1000000} ms`
+        
+        const infoString = `Finished \nIndex: ${response}  \nRam: ${used} MB \nTime: ${end[0]} secs, ${end[1]/1000000} ms`
         spinner.succeed([infoString])
         if (response !== -1) {
           thread2.kill()
-          resolve({time: end[1]/1000000, ram: used, index: response, ...DEFAULT_OBJECT})
+          resolve({time: `${end[0]} secs, ${end[1] / 1000000}`, ram: used, index: response, ...DEFAULT_OBJECT})
         }
         thread1.kill()
       })
@@ -56,11 +57,11 @@ const parallelSearch = (arrayLength, array, value) => {
       .on('message', function (response) {
         const end = process.hrtime(start)
         const used = process.memoryUsage().heapUsed / 1024 / 1024
-        const infoString = `Finished \nIndex: ${response}  \nRam: ${used} MB \nTime: ${end[1]/1000000} ms`
+        const infoString = `Finished \nIndex: ${response}  \nRam: ${used} MB \nTime: ${end[0]} secs, ${end[1]/1000000} ms`
         spinner.succeed([infoString])
         if (response !== -1) {
           thread1.kill()
-          resolve({time: end[1]/1000000, ram: used, index: response, ...DEFAULT_OBJECT})
+          resolve({time: `${end[0]} secs, ${end[1] / 1000000}`, ram: used, index: response, ...DEFAULT_OBJECT})
         }
         thread2.kill()
       })
