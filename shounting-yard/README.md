@@ -1,7 +1,8 @@
 # Shounting-yard algorithm
 A simple implementation of dijkstra shounting yard algorithm in js
 <p align="center">
- <iframe width="854" height="480" src="https://www.youtube.com/embed/y_snKkv0gWc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  [![Andrés Alonso Contés - Shunting-yard and Postfix Calculator Algorithms](https://img.youtube.com/vi/y_snKkv0gWc/0.jpg)](https://www.youtube.com/watch?v=y_snKkv0gWc)
+  <iframe width="854" height="480" src="https://www.youtube.com/embed/y_snKkv0gWc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 </p>
 
 ## Features
