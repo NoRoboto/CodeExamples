@@ -1,8 +1,6 @@
 # Shounting-yard algorithm
 A simple implementation of dijkstra shounting yard algorithm in js
-<p align="center">
-  [![Andrés Alonso Contés - Shunting-yard and Postfix Calculator Algorithms](https://img.youtube.com/vi/y_snKkv0gWc/0.jpg)](https://www.youtube.com/watch?v=y_snKkv0gWc)
-</p>
+[![Andrés Alonso - Shunting-yard and Postfix Calculator Algorithms](https://img.youtube.com/vi/y_snKkv0gWc/0.jpg)](https://www.youtube.com/watch?v=y_snKkv0gWc)
 
 ## Features
 * convert Infix to postfix
