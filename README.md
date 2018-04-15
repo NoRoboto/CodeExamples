@@ -19,6 +19,7 @@
 - [Sources]()
   - [adb](https://github.com/NoRoboto/CodeExamples/tree/master/adb)
   - [sort & search algorithms](https://github.com/NoRoboto/CodeExamples/tree/master/sorting-algorithms/node-cli-manager)
+  - [shounting yard algorithm](https://github.com/NoRoboto/CodeExamples/tree/master/shounting-yard)
 - [Acknowledgments](#acknowledgments)
 - [License](#license)
 
