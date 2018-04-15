@@ -134,7 +134,6 @@ const shuntingYard = (expression) => {
  * @param  {string} expression. infix expression
  */
 const infixToPostfix = (expression) => {
-  console.log(expression)
   let input = expression.replace(/\s/g, "")
   input = [...input]
   return shuntingYard(input)
