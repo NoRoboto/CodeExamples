@@ -106,7 +106,8 @@ const checkAndUpdateStack = (value, stack, output) => {
 /**
  * @param  {Array} expression. Input array of tokens and numeric values
  */
-const infixToPostfix = (expression) => {
+const shuntingYard = (expression) => {
+
   let stack = []
   let output = []
 
@@ -129,11 +130,23 @@ const infixToPostfix = (expression) => {
   return output
 }
 
-const infixToPrefix = (expression) => {
+/**
+ * @param  {string} expression. infix expression
+ */
+const infixToPostfix = (expression) => {
   console.log(expression)
   let input = expression.replace(/\s/g, "")
+  input = [...input]
+  return shuntingYard(input)
+}
+
+/**
+ * @param  {string} expression. infix expression
+ */
+const infixToPrefix = (expression) => {
+  let input = expression.replace(/\s/g, "")
   input = changeParenthesis([...input]).reverse()
-  return infixToPostfix(input).reverse()
+  return shuntingYard(input).reverse()
 }
 
 module.exports = {

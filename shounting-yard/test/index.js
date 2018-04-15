@@ -25,49 +25,45 @@ const testCheck = (testName, input, funct, expected) => {
     console.log(testName, 'Passed the test!')
     return true
   }
-  
+
   console.log('expected', expected)
   console.log(testName, 'bad Test!')
   return false
 }
 
 const case1 = () => {
-  let input = '(4+8)*(6 - 5)/((3 - 2)*(2+2))'.replace(/\s/g, "")
-  input = [...input]
+  const input = '(4+8)*(6 - 5)/((3 - 2)*(2+2))'
   const expected = ['4', '8', '+', '6', '5', '-', '*', '3', '2', '-', '2', '2', '+', '*', '/']
   return testCheck('Test infix to postfix 1', input, notations.infixToPostfix, expected)
 }
 
 const case2 = () => {
-  let input = '3+4*5/6'.replace(/\s/g, "")  
-  input = [...input]
+  const input = '3+4*5/6'
   const expected = ['3', '4', '5', '*', '6', '/', '+']
   return testCheck('Test infix to postfix 2', input, notations.infixToPostfix, expected)
 }
 
 const case3 = () => {
-  let input = '7-(2*3+5)*(8-4/2)'.replace(/\s/g, "")
-  input = [...input]
+  const input = '7-(2*3+5)*(8-4/2)'
   const expected = ['7', '2', '3', '*', '5', '+', '8', '4', '2', '/', '-', '*', '-']
   return testCheck('Test infix to postfix 2', input, notations.infixToPostfix, expected)
 }
 
 const case4 = () => {
-  let input = '2*5+8-(5 / (1 + 9))'.replace(/\s/g, "")
-  input = [...input]
+  const input = '2*5+8-(5 / (1 + 9))'
   const expected = ['2', '5', '*', '8', '+', '5', '1', '9', '+', '/', '-']
   return testCheck('Test infix to postfix 2', input, notations.infixToPostfix, expected)
 }
 
 
 const case5 = () => {
-  let input = '(7 * 3) + (5/(8-4))'
+  const input = '(7 * 3) + (5/(8-4))'
   const expected = ['+', '*', '7', '3', '/', '5', '-', '8', '4']
   return testCheck('Test infix to prefix 1', input, notations.infixToPrefix, expected)
 }
 
 const case6 = () => {
-  let input = '3*2-2'
+  const input = '3*2-2'
   const expected = ['-', '*', '3', '2', '2']
   return testCheck('Test infix to prefix 2', input, notations.infixToPrefix, expected)
 }

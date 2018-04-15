@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/local/bin/node /home/danield/.yarn/bin/yarn.js start
+  /usr/local/bin/node /home/danield/.yarn/bin/yarn.js force
 
 PATH: 
   /home/danield/.yarn/bin:/home/danield/bin:/home/danield/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin:/usr/local/jdk1.8.0_161/bin:/home/danield/Android/Sdk/tools
@@ -21,7 +21,7 @@ npm manifest:
     "main": "menu.js",
     "scripts": {
       "start": "node menu.js",
-      "force": "node --max_old_space_size=1024 menu.js"
+      "force": "node --max_old_space_size=2048 menu.js"
     },
     "dependencies": {
       "ora": "^2.0.0",
@@ -252,9 +252,9 @@ Lockfile:
 
 Trace: 
   Error: Command failed.
-  Exit code: 1
+  Exit code: 134
   Command: sh
-  Arguments: -c node menu.js
+  Arguments: -c node --max_old_space_size=2048 menu.js
   Directory: /home/danield/Documents/CodeExamples/sorting-algorithms/node-cli-manager
   Output:
   
