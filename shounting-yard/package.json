@@ -1,0 +1,14 @@
+{
+  "name": "shounting-yard",
+  "version": "1.0.0",
+  "description": "Javascript Shounting yard algorithm",
+  "main": "main.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "author": "NoRoboto",
+  "license": "ISC"
+}
