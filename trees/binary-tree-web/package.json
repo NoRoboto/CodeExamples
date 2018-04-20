@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Arithmetic expression to binary tree",
   "main": "index.js",
+  "scripts": {
+    "start": "node node_modules/parcel-bundler/bin/cli ./src/index.html"
+  },
   "author": "Alejandro Suarez, Daniel Diaz",
   "license": "MIT",
   "private": false,
