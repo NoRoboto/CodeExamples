@@ -3,8 +3,8 @@ import {infixToPrefix} from './shuntingYard.js'
 
 const node = (value, level, left = false, right = false) =>
     (left && right)?
-        {value, level, left, right} :
-        { value, level}
+        { value, level, left, right } :
+        { value, level }
 
 const buildNode = (tokens, level) => {
     const [head, ...tail] = tokens
