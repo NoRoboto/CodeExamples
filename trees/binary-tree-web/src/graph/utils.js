@@ -2,35 +2,90 @@ import {
   createTree
 } from '../algorithms/operationTree'
 
-
-const iterateBT = (input) => {
-  let tree = createTree("1 + (2 / 6) + 5")
-  tree = JSON.parse(JSON.stringify(tree, null, 2))
-  console.log(tree)
-  // breadthFirstTraversal(tree, (node) => console.log(node.value) )
-  const nodes = []
-  const edges = []
-  search(tree, nodes, edges, 0)
-  console.log('nodes', nodes)
-  console.log('edges', edges)
+const removeLevels = (nodes) => {
+  nodes.map(node => delete node.data.level)
 }
 
-const search = (tree, nodes, edges, index) => {
-  index = index + 1
+
+const getTree = (input) => {
+  const nodes = []
+  let tree = createTree(input)
+  tree = JSON.parse(JSON.stringify(tree, null, 2))
+
+  search(tree, nodes)
+  const edges = makeEdges(nodes)
+  removeLevels(nodes)
+
+  return {
+    nodes,
+    edges
+  }
+}
+
+const search = (tree, nodes) => {
+
+  if (tree.level === 0)
+    nodes.push({
+      group: "nodes",
+      data: {
+        name: tree.value,
+        level: tree.level
+      }
+    })
+
   if (tree.left) {
-    console.log(tree.left)
-    nodes.push({data: {name: tree.value}})  
-    search(tree.left, nodes, edges, index)
+    nodes.push(search(tree.left, nodes))
   }
 
   if (tree.right) {
-    console.log(tree.right)
-    edges.push({data: {name: tree.value}})
-    search(tree.right, nodes, edges, index)
+    nodes.push(
+      search(tree.right, nodes)
+    )
   }
 
+  return {
+    group: "nodes",
+    data: {
+      name: tree.value,
+      level: tree.level
+    }
+  }
 }
 
+const makeEdges = (nodes) => {
+  const edges = []
+  let parent = nodes[0]
 
+  nodes.sort((a, b) => a.data.level - b.data.level)
+    .map((node, i) => node.data.id = i.toString())
 
-iterateBT()
+  for (let i = 1; i < nodes.length; i += 2) {
+    const left = {
+      group: "edges",
+      data: {
+        source: parent.data.id,
+        target: nodes[i].data.id
+      }
+    }
+    const right = {
+      group: "edges",
+      data: {
+        source: parent.data.id,
+        target: nodes[i + 1].data.id
+
+      }
+    }
+    edges.push(left)
+    edges.push(right)
+
+    if (isNaN(nodes[i].data.name)) {
+      parent = nodes[i]
+    } else {
+      parent = nodes[i + 1]
+    }
+  }
+
+  return edges
+}
+
+export default getTree
