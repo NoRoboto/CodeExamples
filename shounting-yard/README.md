@@ -5,7 +5,7 @@ A simple implementation of dijkstra shounting yard algorithm in js
 ## Features
 * convert Infix to postfix
 * convert Infix to prefix
-* permit symbols + - * / ( )
+* allowed symbols + - * / ( )
 * one digit 
 
 ## Pre-conditions
