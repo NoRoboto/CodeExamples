@@ -5,6 +5,8 @@ A simple implementation of dijkstra shounting yard algorithm in js
 ## Features
 * convert Infix to postfix
 * convert Infix to prefix
+* permit symbols + - * / ( )
+* one digit 
 
 ## Pre-conditions
 #### <i class="icon-list"></i> We need
